@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp">
+
+    <!-- Layout of each item in the department preferences container -->
+
+    <TextView
+        android:id="@+id/todoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToDo Name"
+        android:typeface="serif"
+        android:layout_marginRight="10dp"
+        android:textSize="16dp"
+        android:layout_centerVertical="true"
+       />
+
+    <CheckBox
+        android:id="@+id/isComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+
+
+</RelativeLayout>

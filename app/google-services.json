@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "513118090595",
+    "firebase_url": "https://notice-board-babe0.firebaseio.com",
+    "project_id": "notice-board-babe0",
+    "storage_bucket": "notice-board-babe0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513118090595:android:deae520bda4b5846",
+        "android_client_info": {
+          "package_name": "abhijeet.com.notice_board"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513118090595-7rm8q8gt9b5g9r7i3mb1k5msc53g5vti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTf-IB3CHh3PBctE7qvKEM-ocjoc13cTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

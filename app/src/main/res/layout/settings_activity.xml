@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp">
+
+     <TextView
+        android:id="@+id/about"
+        android:onClick="textViewClick"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:textSize="17dp"
+        android:text="About"
+        android:gravity="center_vertical"
+        android:typeface="serif">
+    </TextView>
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/terms"
+        android:onClick="textViewClick"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:textSize="17dp"
+        android:text="Terms and Conditions"
+        android:gravity="center_vertical"
+        android:typeface="serif">
+    </TextView>
+
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/libraries"
+        android:onClick="textViewClick"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:textSize="17dp"
+        android:text="Open Source Libraries"
+        android:gravity="center_vertical"
+        android:typeface="serif">
+    </TextView>
+
+
+</LinearLayout>

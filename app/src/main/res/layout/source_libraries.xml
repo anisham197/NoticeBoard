@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:scrollbars="none"
+        android:scrollbarSize="0dp"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbarStyle="insideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:id="@+id/begin"
+                android:textStyle="bold"
+                android:text="Open Source Libraries " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:id="@+id/one"
+                android:textStyle="normal"
+                android:text="Firebase: 'com.google.firebase:firebase-core:9.0.2' "  />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:id="@+id/two"
+                android:layout_marginBottom="8dp"
+                android:textStyle="normal"
+                android:text="Firebase Authentication: 'com.google.firebase:firebase-auth:9.0.2' " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:id="@+id/three"
+                android:layout_marginBottom="8dp"
+                android:textStyle="normal"
+                android:text="Firebase Realtime Database: 'com.google.firebase:firebase-database:9.0.2' " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:id="@+id/three"
+                android:layout_marginBottom="8dp"
+                android:textStyle="normal"
+                android:text="Firebase Storage: 'com.google.firebase:firebase-storage:9.0.2' " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:textStyle="normal"
+                android:text="Cards Library: 'com.android.support:cardview-v7:23.2.1' " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                android:textStyle="normal"
+                android:text="Image Download: 'com.squareup.picasso:picasso:2.5.2' "/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginBottom="8dp"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:text="Design: 'com.android.support:design:23.2.1' " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginBottom="8dp"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:text="Support: 'com.android.support:support-v4:23.2.1' " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginBottom="8dp"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:text="Play Services: 'com.google.gms:google-services:3.0.0' " />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

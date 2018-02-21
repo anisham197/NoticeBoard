@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Shows login page with option to create new user account -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+       >
+
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo_msrit"/>
+
+        <!-- Email Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/field_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:typeface="serif"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Password Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/field_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:typeface="serif"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/email_sign_in_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Login"
+            android:typeface="serif"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sign_up_text_view"
+            android:text="Create New Account"
+            android:typeface="serif"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            android:clickable="true"/>
+
+        <!--  <android.support.v7.widget.AppCompatButton
+             android:id="@+id/sign_out_button"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="24dp"
+             android:layout_marginBottom="8dp"
+             android:padding="12dp"
+             android:background="@color/blue"
+             android:textColor="@color/white"
+             android:text="Sign out"/>
+
+
+
+          <TextView android:id="@+id/link_forgotPassword"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="24dp"
+               android:text="Forgot Password"
+               android:gravity="center"
+               android:textSize="16dip"/>
+
+           <TextView android:id="@+id/link_signup"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="24dp"
+               android:layout_marginTop="48dp"
+               android:text="No account yet? Create one"
+               android:gravity="center"
+               android:textSize="16dip"/> -->
+
+    </LinearLayout>
+</ScrollView>
