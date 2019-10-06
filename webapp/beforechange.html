@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2016 Google Inc.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+
+  <!-- Material Design Theming -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Firebase -->
+  <!-- *******************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet by navigating to:
+        https://console.firebase.google.com
+       and choosing a project you've created.  Then click the red HTML logo at the top
+       right of the page with the caption "Add Firebase to your web app".
+       Copy the snippet that appears in place of this comment.
+       *************************************************************************** -->
+
+</head>
+<body>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+<script>
+<!--Abhijeet's code to access his database-->
+  
+  var config = {
+    apiKey: "AIzaSyDPz0mOsqhcyWiOh_RUsqVENoF9eu_NlIY",
+    authDomain: "notice-board-babe0.firebaseapp.com",
+    databaseURL: "https://notice-board-babe0.firebaseio.com",
+    storageBucket: "notice-board-babe0.appspot.com",
+  };
+  var app=firebase.initializeApp(config);
+	 
+	 storage = app.storage();
+</script>
+  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <!-- Header section containing title -->
+    <header class="mdl-layout__header mdl-color-text--white mdl-color--light-green-700">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+        <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
+          <h3>Welcome</h3>
+        </div>
+		<Button onclick="check1()">Sign Out</Button>
+      </div>
+	  
+    </header>
+     
+    <main class="mdl-layout__content mdl-color--grey-100">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+           
+		   
+        <!-- Container for the demo -->
+        <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__title mdl-color--light-green-600 mdl-color-text--white">
+            <h2 class="mdl-card__title-text">Upload a file</h2>
+                  
+		 
+		  </div>
+		   <div class="mdl-card__supporting-text mdl-color-text--grey-600" id="messagesDiv">
+            <p>Add a title to your file</p>
+			<input type="text" id="description" name="description" placeholder="Description">
+             
+			  <br>
+          </div>
+		   <form>
+		   <div class="mdl-card__supporting-text mdl-color-text--grey-600" id="messagesDiv">
+            
+</div>
+
+		
+
+         <div class="multiselect2"> 
+           <div class="selectBox2 mdl-card__supporting-text mdl-color-text--grey-600" onclick="showCheckboxes2() "> 
+             <select> <option>Type</option> </select> 
+              <div class="overSelect2"></div> </div> 
+                <div id="checkboxes2"> 
+                    <label for="one1"><input type="checkbox" id="Exam"/>Exam</label> 
+                    <label for="two2"><input type="checkbox" id="Fees"/>Fees</label> 
+                    <label for="three3"><input type="checkbox" id="Placement"/>Placement</label>
+                    <label for="four4"><input type="checkbox" id="Extra Curricular"/>Extra Curriculars</label>
+                    <label for="five5"><input type="checkbox" id="Holiday"/>Holiday</label>
+                    <label for="six6"><input type="checkbox" id="Sports"/>Sports</label>
+                    <label for="seven7"><input type="checkbox" id="Others"/>Others</label>
+
+
+</div>
+</div>
+</br>
+</br>
+ 
+<div class="multiselect"> 
+<div class="selectBox mdl-card__supporting-text mdl-color-text--grey-600" onclick="showCheckboxes() "> 
+<select> <option>Departments</option> </select> 
+<div class="overSelect"></div> </div> 
+<div id="checkboxes"> 
+<label for="1"><input type="checkbox" id="CS"/>CS</label> 
+                    <label for="2"><input type="checkbox" id="IS"/>IS</label> 
+                    <label for="3"><input type="checkbox" id="EEE"/>EEE</label>
+                    <label for="4"><input type="checkbox" id="EC"/>EC</label>
+                    <label for="5"><input type="checkbox" id="TC"/>TC</label>
+                    <label for="6"><input type="checkbox" id="MECH"/>MECH</label>
+                    <label for="7"><input type="checkbox" id="ML"/>ML</label>
+					<label for="8"><input type="checkbox" id="IEM"/>IEM</label>
+					<label for="9"><input type="checkbox" id="CV"/>CV</label>
+					<label for="10"><input type="checkbox" id="CHEM"/>CHEM</label>
+					<label for="11"><input type="checkbox" id="ARCH"/>ARCH</label>
+					<label for="12"><input type="checkbox" id="EI"/>EI</label>
+					<label for="13"><input type="checkbox" id="BT"/>BT</label>
+					<label for="14"><input type="checkbox" id="all" onclick="allcheck()"/>All</label> 
+</div>
+</div>
+</br>
+</br>
+<div class="multiselect1">
+<div class="selectBox1 mdl-card__supporting-text mdl-color-text--grey-600" onclick="showCheckboxes1()">
+<select> <option>Semester</option> </select> 
+<div class="overSelect1"></div></div>
+<div id="checkboxes1"> 
+<label for="1one"><input type="checkbox" id="one"/>I</label> 
+<label for="2two"><input type="checkbox" id="two"/>II </label> 
+<label for="3three"><input type="checkbox" id="three"/>III</label>
+<label for="4four"><input type="checkbox" id="four"/>IV</label>
+ <label for="5five"><input type="checkbox" id="five"/>V </label> 
+ <label for="6six"><input type="checkbox" id="six"/>VI</label>
+<label for="7seven"><input type="checkbox" id="seven"/>VII</label> 
+<label for="8eight"><input type="checkbox" id="eight"/>VIII</label> 
+<label for="9nine"><input type="checkbox" id="all1" onclick="allcheck1()"/>All</label> 
+ </div>
+ </div> 
+
+</br>
+</br>
+
+
+</form>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600" id="messagesDiv">
+            <p>Select a file below. When it is uploaded, a link will be displayed to the uploaded file.</p>
+            <h6>Choose File</h6>
+			 
+            <input  type="file" id="file" name="file"/>
+            <h6>File URL:</h6>
+            <span id="linkbox"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+  var i=0;
+  var map = new Map();
+  var key1,query;
+  array1=new Array();
+ 
+ 
+  var auth = firebase.auth();
+    var storageRef = firebase.storage().ref();
+    function handleFileSelect(evt) {
+       
+	 evt.stopPropagation();
+      evt.preventDefault();
+	  
+      var file = evt.target.files[0];
+      var metadata = {
+        'contentType': file.type
+      };
+	
+      // Push to child path.
+      var uploadTask = storageRef.child('images/' + file.name).put(file, metadata);
+	  console.log(file.name);
+      // Listen for errors and completion of the upload.
+      // [START oncomplete]
+      uploadTask.on('state_changed', null, function(error) {
+        // [START onfailure]
+        console.error('Upload failed:', error);
+        // [END onfailure]
+      }, function() {
+        console.log('Uploaded',uploadTask.snapshot.totalBytes,'bytes.');
+        console.log(uploadTask.snapshot.metadata);
+        var url = uploadTask.snapshot.metadata.downloadURLs[0];
+		
+		writeImageData(url);
+	function writeImageData(url) {
+	//firebase.database().ref('admin').set({url
+//});
+
+//getting timestamp and description
+	var d = new Date();
+var n = d.getTime();
+//Checking checkboxes
+var first=document.getElementById('one').checked;
+var second=document.getElementById('two').checked;
+var three=document.getElementById('three').checked;
+var four=document.getElementById('four').checked;
+var five=document.getElementById('five').checked;
+var six=document.getElementById('six').checked;
+var seven=document.getElementById('seven').checked;
+var eight=document.getElementById('eight').checked;
+var cs=document.getElementById('CS').checked;
+	 var is=document.getElementById('IS').checked;
+	 var ec=document.getElementById('EC').checked;
+	 var eee=document.getElementById('EEE').checked;
+	 var tc=document.getElementById('TC').checked;
+	 var mech=document.getElementById('MECH').checked;
+	 var iem=document.getElementById('IEM').checked;
+	 var ml=document.getElementById('ML').checked;
+	  var arch=document.getElementById('ARCH').checked;
+	   var chem=document.getElementById('CHEM').checked;
+ var cv=document.getElementById('CV').checked;
+ var bt=document.getElementById('BT').checked;
+ var ei=document.getElementById('EI').checked;
+ var desc =document.getElementById("description").value;
+ var temp="";
+ if(document.getElementById('Fees').checked){temp="Fees"};
+ if(document.getElementById('Holiday').checked){temp="Holiday"};
+ if(document.getElementById('Sports').checked){{temp="Sports"}};
+ if(document.getElementById('Others').checked){temp="Others"};
+ if(document.getElementById('Placement').checked){temp="Placement"};
+  if(document.getElementById('Exam').checked){temp="Exam"};
+ if(document.getElementById('Extra Curricular').checked){temp="Extra Curriculars"};
+ 
+console.log(temp);
+
+
+
+//firebase.database().ref('/auth/' ).once('value').then(function(snapshot) {
+ //var email1=snapshot.val();
+   //console.log(email1);
+  //});
+  //var map = new Map();
+  //var key1;
+
+ 
+// add a item
+   
+  
+firebase.database().ref('admin/' + key1).child(n).set({
+        	  title:desc,     
+	 url: url,
+	 type:temp
+			  });
+			 
+ firebase.database().ref('admin/' + key1).child(n).child("dept").set({
+        	  
+      //saves the date of modification/creation as well
+      "Computer Science":cs,
+	  "Information Science":is,
+	  "Electronics and Communication":ec,
+	  "Electrical and Electronics":eee,
+      "Mechanical":mech,
+      "Industrial Engineering and Management":iem,
+      "Telecommunication":tc,
+      "Chemical":chem,
+      "Civil":cv,
+      "Biotechnology":bt,
+      "Medical Electronics":ml,
+       "Electronics and Instrumentation":ei,
+      "Architecture":arch		
+ });
+ firebase.database().ref('admin/' + key1).child(n).child("semester").set({
+	   1:first,
+	  2:second,
+	  3:three,
+	  4:four,
+	  5:five,
+      6:six,
+      7:seven,
+      8:eight	  
+    }); 	   
+	
+
+
+
+ }
+          
+
+        console.log('File available at', url);
+         
+    // [START_EXCLUDE]
+	//document.getElementById('linkbox').innerHTML = "Trip Type: " + gettriptype + "<br/> Leaving From: " + getdeparture;
+	document.getElementById('linkbox').innerHTML ='<a href="' +  url + '">Click For File</a>'+'<br/><br>File:'+file.name+' uploaded succesfully' ;
+        
+         clear1();
+		// [END_EXCLUDE]
+      });
+      // [END oncomplete]
+    }
+	
+    window.onload = function() {
+	;
+	     //Write a function to dynamically create checkboxes
+		
+     
+	 //document.getElementById('file').disabled = false;
+       
+	document.getElementById('description').addEventListener("keydown", 
+	  function(){
+	  if(document.getElementById('description').value!=null)
+	  {document.getElementById("file").disabled=false;
+	  create();
+	  
+	  
+	  }
+	      
+	  else{
+	  document.getElementById("file").disabled=true;
+	  }
+	  }, false);
+	 
+	  document.getElementById('file').addEventListener('change', handleFileSelect, false);
+	   
+     
+	 // document.getElementById('file').disabled = false;
+	 document.getElementById("file").disabled = true; 
+      
+       
+    }
+	function create(array1)
+	{
+	
+	 var email=localStorage.getItem("email");
+	 console.log(email);
+	var query = firebase.database().ref("/auth/").orderByKey();
+query.once("value")
+  .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      //Computer Science
+      var key = childSnapshot.key;
+	  //console.log(key);
+      var childData = childSnapshot.val();
+	  //cs@cs.com
+	  //console.log(childData);
+	  map[childData] = key; 
+//map['is@is.com']='Information Science';
+       //console.log(map[childData]);
+	  //array1[i]=key;
+	  //i++;
+    
+  });
+ 
+  key1=map[email];
+  console.log(key1);
+  //console.log(array1[0]);
+ 
+  
+   //console.log(arreyaar.length);
+/*for(var j=0;j<3;j++)
+{
+ 
+   var container = $('#checkboxes');
+   var inputs = container.find('id.checkboxes');
+   var id = inputs.length+1;
+
+   $('<input />', { type: 'checkbox', id: 'cb'+id, value: name }).appendTo(container);
+   $('<label />', { 'for': 'cb'+id, text: name }).appendTo(container);
+
+ }*/
+  
+//console.log(key1);
+//console.log("Arreyaar:"+arreyaar[0]);
+
+});
+	} 
+	 
+	</script>
+	<script>
+	 
+	
+	function clear1()
+	{
+	
+	document.getElementById('description').value="";
+	
+	 document.getElementById("Exam").checked = false;
+	 document.getElementById("Fees").checked = false;
+	 document.getElementById("Placement").checked = false;
+	
+	  document.getElementById("Extra Curricular").checked = false;
+	   document.getElementById("Holiday").checked = false;
+	    document.getElementById("Sports").checked = false;
+		 document.getElementById("Others").checked = false;
+	document.getElementById('one').checked=false;
+   document.getElementById('two').checked=false;
+document.getElementById('three').checked=false;
+document.getElementById('four').checked=false;
+document.getElementById('five').checked=false;
+document.getElementById('six').checked=false;
+document.getElementById('seven').checked=false;
+    document.getElementById('eight').checked=false;
+	document.getElementById('CS').checked=false;
+	 document.getElementById('IS').checked=false;
+	 document.getElementById('EC').checked=false;
+	 document.getElementById('EEE').checked=false;
+	 document.getElementById('TC').checked=false;
+	 document.getElementById('MECH').checked=false;
+	 document.getElementById('IEM').checked=false;
+	 document.getElementById('ML').checked=false;
+	  document.getElementById('ARCH').checked=false;
+	   document.getElementById('CHEM').checked=false;
+ document.getElementById('CV').checked=false;
+ document.getElementById('BT').checked=false;
+ document.getElementById('EI').checked=false;
+  document.getElementById('all').checked=false;
+   document.getElementById('all1').checked=false;
+	}
+	function allcheck()
+	{ 
+      document.getElementById('CS').checked=true;
+	 document.getElementById('IS').checked=true;
+	 document.getElementById('EC').checked=true;
+	 document.getElementById('EEE').checked=true;
+	 document.getElementById('TC').checked=true;
+	  document.getElementById('MECH').checked=true;
+	  document.getElementById('IEM').checked=true;
+	  document.getElementById('ML').checked=true;
+	  document.getElementById('ARCH').checked=true;
+	   document.getElementById('CHEM').checked=true;
+       document.getElementById('CV').checked=true;
+       document.getElementById('BT').checked=true;
+      document.getElementById('EI').checked=true;	  
+	
+	
+	}
+	function allcheck1()
+	{ 
+      document.getElementById('one').checked=true;
+   document.getElementById('two').checked=true;
+document.getElementById('three').checked=true;
+document.getElementById('four').checked=true;
+document.getElementById('five').checked=true;
+document.getElementById('six').checked=true;
+document.getElementById('seven').checked=true;
+    document.getElementById('eight').checked=true;
+	
+	
+	}
+	//Sign out function
+	function check1()
+{ //to signout
+       firebase.auth().signOut().then(function() {
+	   
+  // Sign-out successful.
+   window.location.href = "index.html";
+}, function(error) { 
+  // An error happened.
+});
+
+  }
+ 
+  </script>
+ //Department dropdown 
+<script> 
+var expanded = false;
+ function showCheckboxes() 
+ { var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) { checkboxes.style.display = "block"; expanded = true; 
+	} 
+	
+	else { checkboxes.style.display = "none"; expanded = false; } 
+	
+	}
+	
+//Semester dropdown
+ var expanded1 = false; 
+ function showCheckboxes1() 
+ { var checkboxes1 = document.getElementById("checkboxes1"); 
+ if (!expanded1) { checkboxes1.style.display = "block"; expanded1 = true; }
+ else { checkboxes1.style.display = "none"; expanded1 = false; } 
+ } 
+ 
+ var expanded2 = false; 
+ function showCheckboxes2() 
+ { var checkboxes2 = document.getElementById("checkboxes2"); 
+ if (!expanded2) { checkboxes2.style.display = "block"; expanded2 = true; }
+ else { checkboxes2.style.display = "none"; expanded2 = false; } 
+ }
+   
+ 
+ </script>
+ <style> .multiselect { width: 200px; } .selectBox { position: relative; } .selectBox select { width: 100%; font-weight: bold; } .overSelect { position: absolute; left: 0; right: 0; top: 0; bottom: 0; } #checkboxes { display: none; border: 1px #dadada solid; } #checkboxes label { display: block; } #checkboxes label:hover { background-color: #1e90ff; } </style>
+
+<style> .multiselect1 { width: 200px; } .selectBox1 { position: relative; } .selectBox1 select { width: 100%; font-weight: bold; } .overSelect1 { position: absolute; left: 0; right: 0; top: 0; bottom: 0; } #checkboxes1 { display: none; border: 1px #dadada solid; } #checkboxes1 label { display: block; } #checkboxes1 label:hover { background-color: #1e90ff; } </style>
+<style> .multiselect2 { width: 200px; } .selectBox2 { position: relative; } .selectBox2 select { width: 100%; font-weight: bold; } .overSelect2 { position: absolute; left: 0; right: 0; top: 0; bottom: 0; } #checkboxes2 { display: none; border: 1px #dadada solid; } #checkboxes2 label { display: block; } #checkboxes2 label:hover { background-color: #1e90ff; } </style>
+  </body>
+</html>
